@@ -1,9 +1,11 @@
 const fs = require("fs");
 
-//Sync......
+let myNumber = 33;
+
+//Sync...... Bolcking req.
 fs.writeFileSync("./text.txt", "Hy Vishal babar");
 
-//Async.....
+//Async..... Non-Bolcking req.
 fs.writeFile("./text2.txt", "hy Vishal babar", (err) => {console.log(err)})
 
 //Sync...
@@ -17,4 +19,6 @@ fs.readFile("./deta.txt", "utf-8", (err, result) =>{
     }else{
         console.log(result);
     }
-})
+}) 
+
+console.log(myNumber);
